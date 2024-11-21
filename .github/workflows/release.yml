@@ -43,7 +43,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Compress
-        run: tar -czvf stalin-sort_${{ github.ref_name }}.tgz dist
+        run: tar -czvf bogobogosort_${{ github.ref_name }}.tgz dist
       - name: Generate Changelog
         run: npx changelogithub@0.13
         env:
@@ -52,4 +52,4 @@ jobs:
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: stalin-sort_${{ github.ref_name }}.tgz
+          files: bogobogosort_${{ github.ref_name }}.tgz
