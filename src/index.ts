@@ -16,8 +16,11 @@ export function sort(arr: Array<number>) {
   let curArr: Array<number> = []
 
   for (let prog = 0; prog < arr.length; prog++) {
-    if (typeof arr[prog] !== 'number') {
+    if (typeof arr[prog] !== 'number' || isNaN(arr[prog])) {
       arr.splice(prog, 1)
+      prog--
+
+      continue
     }
 
     curArr = arr.slice(0, prog + 1)
