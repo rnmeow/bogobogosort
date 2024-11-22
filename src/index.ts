@@ -25,13 +25,9 @@ export function sort(arr: Array<number>) {
 
     curArr = arr.slice(0, prog + 1)
 
-    shuf(curArr).forEach((elem, ind) => {
-      if (elem < curArr[ind - 1]) {
-        prog = -1
-
-        return
-      }
-    })
+    if (shuf(curArr).some((elem, ind) => ind > 0 && elem < curArr[ind - 1])) {
+      prog = -1
+    }
   }
 
   /*
