@@ -2,7 +2,7 @@
   "name": "bogobogosort",
   "description": "The fastest sorting algorithm ever, now available in JavaScript.",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Connor Kuo <touch@rnmeow.com>",
   "repository": {
